@@ -108,6 +108,14 @@ python scripts/saea_gae_openspace.py \
 
 The final genotype can be retrained with the standard DARTS evaluation pipeline in `darts/`.
 
+### Architecture found on CIFAR-10
+
+The following normal and reduction cells were obtained in the reported
+open-domain search. Each intermediate node sums its two incoming operations,
+and nodes 2--5 are concatenated to form the cell output.
+
+![Normal and reduction cells found by D-GAENAS on CIFAR-10](assets/cifar10_cells.svg)
+
 ## Ablations, baselines, and figures
 
 Search-mechanism ablation and NAS-Bench-101 baselines:
