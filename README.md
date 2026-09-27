@@ -136,13 +136,6 @@ python scripts/viz_population_1000.py \
   --out results
 ```
 
-Surrogate Kendall correlation:
-
-```bash
-python scripts/eval_ktau_surrogate.py --data_file data/nasbench_only108.tfrecord
-python scripts/eval_ktau_surrogate_201.py --api_path data/NATS-tss-v1_0-3ffb9.pickle.pbz2
-```
-
 Use `python <script> --help` to inspect the options exposed by a utility.
 
 ## Reproducibility notes
