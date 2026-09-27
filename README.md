@@ -111,10 +111,26 @@ The final genotype can be retrained with the standard DARTS evaluation pipeline 
 ### Architecture found on CIFAR-10
 
 The following normal and reduction cells were obtained in the reported
-open-domain search. Each intermediate node sums its two incoming operations,
-and nodes 2--5 are concatenated to form the cell output.
+open-domain search:
 
-![Normal and reduction cells found by D-GAENAS on CIFAR-10](assets/cifar10_cells.svg)
+```python
+Genotype(
+    normal=[
+        ('sep_conv_5x5', 0), ('sep_conv_3x3', 1),
+        ('sep_conv_5x5', 0), ('dil_conv_5x5', 2),
+        ('max_pool_3x3', 0), ('sep_conv_3x3', 1),
+        ('skip_connect', 0),  ('sep_conv_5x5', 2),
+    ],
+    normal_concat=[2, 3, 4, 5],
+    reduce=[
+        ('sep_conv_5x5', 0), ('sep_conv_5x5', 1),
+        ('max_pool_3x3', 0), ('max_pool_3x3', 1),
+        ('dil_conv_3x3', 0), ('dil_conv_5x5', 2),
+        ('skip_connect', 0),  ('sep_conv_5x5', 2),
+    ],
+    reduce_concat=[2, 3, 4, 5],
+)
+```
 
 ## Ablations, baselines, and figures
 
