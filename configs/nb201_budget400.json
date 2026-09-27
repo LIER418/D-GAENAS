@@ -1,0 +1,14 @@
+{
+  "data_file": "data/NATS-tss-v1_0-3ffb9.pickle.pbz2",
+  "eval_budget": 400,
+  "n_init": 100,
+  "n_runs": 30,
+  "n_generations": 200,
+  "pop_size": 100,
+  "pretrain_surr_epochs": 50,
+  "surr_margin": 1.0,
+  "eval_elite_ratio": 0.04,
+  "gae_elite_ratio": 0.04,
+  "restart_stagnation": 10,
+  "run_all_datasets": true
+}

@@ -1,0 +1,13 @@
+{
+  "data_file": "data/nasbench_only108.tfrecord",
+  "eval_budget": 400,
+  "n_init": 50,
+  "n_runs": 30,
+  "n_generations": 500,
+  "pop_size": 100,
+  "pretrain_surr_epochs": 100,
+  "surr_margin": 0.01,
+  "eval_elite_ratio": 0.02,
+  "gae_elite_ratio": 0.02,
+  "restart_stagnation": 10
+}

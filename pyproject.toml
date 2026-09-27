@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "d-gaenas"
+version = "1.0.0"
+description = "Denoising graph autoencoder-based evolutionary neural architecture search"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "torch-geometric>=2.3",
+    "scipy",
+    "numpy",
+    "matplotlib",
+    "pandas",
+    "openpyxl",
+    "nats-bench",
+    "torchvision",
+]
+
+[project.optional-dependencies]
+nb101 = ["tensorflow>=2.12", "optuna", "absl-py"]
+nb301 = []
+supernet = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["core*", "SuperNet*", "darts*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.py"]
