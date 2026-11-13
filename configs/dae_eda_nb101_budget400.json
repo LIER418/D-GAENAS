@@ -1,0 +1,6 @@
+{
+  "budget": 400,
+  "n_runs": 10,
+  "seed": 1039,
+  "tfrecord": "data/nasbench_only108.tfrecord"
+}

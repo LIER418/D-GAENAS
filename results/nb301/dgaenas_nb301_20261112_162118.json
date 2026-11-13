@@ -1,0 +1,126 @@
+{
+  "config": {
+    "model_dir": "data/nb_models_1.0/xgb_v1.0",
+    "eval_budget": 192,
+    "n_init": 50,
+    "n_runs": 10,
+    "n_jobs": 5,
+    "n_generations": 300,
+    "pop_size": 50,
+    "pretrain_gae_epochs": 10,
+    "pretrain_surr_epochs": 100,
+    "pretrain_elite_ratio": 0.1,
+    "gae_online_epochs": 10,
+    "surr_online_epochs": 50,
+    "gae_elite_ratio": 0.2,
+    "eval_elite_ratio": 0.1,
+    "generation_multiplier": 1,
+    "hidden_dim": 128,
+    "latent_dim": 64,
+    "dec_hidden": 128,
+    "dropout": 0.1,
+    "noise_prob": 0.15,
+    "gae_lr": 0.001,
+    "surr_hidden": 64,
+    "surr_latent": 64,
+    "surr_lr": 0.001,
+    "surr_margin": 1.0,
+    "query_with_noise": false,
+    "mutation_prob": 0.1,
+    "generation_method": "dgae",
+    "device": "cuda",
+    "seed": 1800,
+    "dgae_elite_drop_count": 1
+  },
+  "runs": [
+    {
+      "run": 1,
+      "seed": 1800,
+      "queries": 175,
+      "best_observed_validation": 95.04231262207031,
+      "deterministic_validation": 95.04231262207031,
+      "genotype": "{\"normal\": [[\"skip_connect\", 0], [\"skip_connect\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_3x3\", 1], [\"sep_conv_3x3\", 0], [\"sep_conv_3x3\", 1], [\"sep_conv_3x3\", 0], [\"sep_conv_3x3\", 2]], \"normal_concat\": [2, 3, 4, 5], \"reduce\": [[\"max_pool_3x3\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_3x3\", 0], [\"sep_conv_5x5\", 2], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1]], \"reduce_concat\": [2, 3, 4, 5]}"
+    },
+    {
+      "run": 2,
+      "seed": 1801,
+      "queries": 170,
+      "best_observed_validation": 94.91217803955078,
+      "deterministic_validation": 94.91217803955078,
+      "genotype": "{\"normal\": [[\"skip_connect\", 0], [\"skip_connect\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_3x3\", 1], [\"sep_conv_3x3\", 0], [\"sep_conv_3x3\", 2], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 2]], \"normal_concat\": [2, 3, 4, 5], \"reduce\": [[\"skip_connect\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_3x3\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 1], [\"sep_conv_3x3\", 2], [\"dil_conv_3x3\", 2], [\"sep_conv_5x5\", 4]], \"reduce_concat\": [2, 3, 4, 5]}"
+    },
+    {
+      "run": 3,
+      "seed": 1802,
+      "queries": 161,
+      "best_observed_validation": 94.92802429199219,
+      "deterministic_validation": 94.92802429199219,
+      "genotype": "{\"normal\": [[\"skip_connect\", 0], [\"skip_connect\", 1], [\"sep_conv_3x3\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_3x3\", 0], [\"sep_conv_3x3\", 1], [\"sep_conv_3x3\", 0], [\"sep_conv_5x5\", 1]], \"normal_concat\": [2, 3, 4, 5], \"reduce\": [[\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_3x3\", 0], [\"skip_connect\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1]], \"reduce_concat\": [2, 3, 4, 5]}"
+    },
+    {
+      "run": 4,
+      "seed": 1803,
+      "queries": 152,
+      "best_observed_validation": 95.08547973632812,
+      "deterministic_validation": 95.08547973632812,
+      "genotype": "{\"normal\": [[\"skip_connect\", 0], [\"skip_connect\", 1], [\"skip_connect\", 1], [\"sep_conv_3x3\", 2], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 2], [\"sep_conv_3x3\", 2], [\"sep_conv_5x5\", 3]], \"normal_concat\": [2, 3, 4, 5], \"reduce\": [[\"avg_pool_3x3\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 1], [\"dil_conv_5x5\", 4]], \"reduce_concat\": [2, 3, 4, 5]}"
+    },
+    {
+      "run": 5,
+      "seed": 1804,
+      "queries": 192,
+      "best_observed_validation": 95.14910125732422,
+      "deterministic_validation": 95.14910125732422,
+      "genotype": "{\"normal\": [[\"skip_connect\", 0], [\"skip_connect\", 1], [\"sep_conv_3x3\", 1], [\"sep_conv_5x5\", 2], [\"sep_conv_3x3\", 0], [\"sep_conv_5x5\", 2], [\"sep_conv_3x3\", 0], [\"sep_conv_5x5\", 2]], \"normal_concat\": [2, 3, 4, 5], \"reduce\": [[\"max_pool_3x3\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1], [\"skip_connect\", 0], [\"sep_conv_3x3\", 1], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 4]], \"reduce_concat\": [2, 3, 4, 5]}"
+    },
+    {
+      "run": 6,
+      "seed": 1805,
+      "queries": 192,
+      "best_observed_validation": 95.02827453613281,
+      "deterministic_validation": 95.02827453613281,
+      "genotype": "{\"normal\": [[\"skip_connect\", 0], [\"skip_connect\", 1], [\"sep_conv_3x3\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 2], [\"sep_conv_3x3\", 0], [\"sep_conv_5x5\", 2]], \"normal_concat\": [2, 3, 4, 5], \"reduce\": [[\"avg_pool_3x3\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1], [\"dil_conv_5x5\", 0], [\"sep_conv_5x5\", 1]], \"reduce_concat\": [2, 3, 4, 5]}"
+    },
+    {
+      "run": 7,
+      "seed": 1806,
+      "queries": 167,
+      "best_observed_validation": 95.08262634277344,
+      "deterministic_validation": 95.08262634277344,
+      "genotype": "{\"normal\": [[\"skip_connect\", 0], [\"skip_connect\", 1], [\"sep_conv_3x3\", 1], [\"sep_conv_3x3\", 2], [\"sep_conv_3x3\", 1], [\"sep_conv_5x5\", 2], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 2]], \"normal_concat\": [2, 3, 4, 5], \"reduce\": [[\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1], [\"skip_connect\", 0], [\"skip_connect\", 1], [\"sep_conv_5x5\", 1], [\"dil_conv_5x5\", 3], [\"sep_conv_5x5\", 0], [\"max_pool_3x3\", 1]], \"reduce_concat\": [2, 3, 4, 5]}"
+    },
+    {
+      "run": 8,
+      "seed": 1807,
+      "queries": 151,
+      "best_observed_validation": 95.1005630493164,
+      "deterministic_validation": 95.1005630493164,
+      "genotype": "{\"normal\": [[\"skip_connect\", 0], [\"skip_connect\", 1], [\"sep_conv_3x3\", 0], [\"sep_conv_3x3\", 2], [\"sep_conv_3x3\", 1], [\"sep_conv_3x3\", 2], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 2]], \"normal_concat\": [2, 3, 4, 5], \"reduce\": [[\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_3x3\", 0], [\"sep_conv_3x3\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_3x3\", 3], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1]], \"reduce_concat\": [2, 3, 4, 5]}"
+    },
+    {
+      "run": 9,
+      "seed": 1808,
+      "queries": 174,
+      "best_observed_validation": 95.06861877441406,
+      "deterministic_validation": 95.06861877441406,
+      "genotype": "{\"normal\": [[\"skip_connect\", 0], [\"skip_connect\", 1], [\"sep_conv_3x3\", 1], [\"sep_conv_3x3\", 2], [\"sep_conv_3x3\", 0], [\"sep_conv_3x3\", 2], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 3]], \"normal_concat\": [2, 3, 4, 5], \"reduce\": [[\"skip_connect\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 0], [\"skip_connect\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1]], \"reduce_concat\": [2, 3, 4, 5]}"
+    },
+    {
+      "run": 10,
+      "seed": 1809,
+      "queries": 185,
+      "best_observed_validation": 94.88926696777344,
+      "deterministic_validation": 94.88926696777344,
+      "genotype": "{\"normal\": [[\"skip_connect\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_3x3\", 0], [\"sep_conv_3x3\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 0], [\"sep_conv_3x3\", 1]], \"normal_concat\": [2, 3, 4, 5], \"reduce\": [[\"sep_conv_5x5\", 0], [\"sep_conv_3x3\", 1], [\"dil_conv_5x5\", 0], [\"skip_connect\", 1], [\"sep_conv_5x5\", 1], [\"sep_conv_5x5\", 2], [\"sep_conv_5x5\", 0], [\"sep_conv_5x5\", 1]], \"reduce_concat\": [2, 3, 4, 5]}"
+    }
+  ],
+  "aggregate": {
+    "n_runs": 10,
+    "best_observed_validation_mean": 95.02864456176758,
+    "best_observed_validation_std": 0.08409889878368682,
+    "deterministic_validation_mean": 95.02864456176758,
+    "deterministic_validation_std": 0.08409889878368682,
+    "queries_mean": 171.9,
+    "queries_std": 14.045995870709916
+  }
+}
